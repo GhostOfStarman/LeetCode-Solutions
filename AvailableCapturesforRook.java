@@ -11,81 +11,59 @@ class Solution {
     has been checked. Then the number of available moves is returned.*/
     
     for(int i = 0; i < board.length; i++){
-        
         for(int j = 0; j < board[0].length; j++){
-        
-        if(board[i][j] == 'R'){
             
+        if(board[i][j] == 'R'){
             int n = i;
             while(n >= 0){
-                
                 if(board[n][j] == 'p'){
-                    
                     moveCount++;
                     break;
                 }
-                
                 if(board[n][j] == 'B'){
                     break;
                 }
-                
-                n--;
-                
+                n--;  
             }
             
             int s = i;
             while(s < 8){
-                
                 if(board[s][j] == 'p'){
-                    
                     moveCount++;
                     break;
                 }
-                
                 if(board[s][j] == 'B'){
                     break;
                 }
-                
                 s++;
             }
             
             int e = j;
             while(e < 8){
-                
                 if(board[i][e] == 'p'){
-                    
                     moveCount++;
                     break;
                 }
-                
                 if(board[i][e] == 'B'){
                     break;
                 }
-                
                 e++;
             }
             
             int w = j;
             while(w >= 0){
-                
                 if(board[i][w] == 'p'){
-                    
                     moveCount++;
                     break;
                 }
-                
                 if(board[i][w] == 'B'){
                     break;
                 }
-                
                 w--;
             }
-            
             break;
-        }        
-            
+        }         
         }
-        
     }
         
     return moveCount;
