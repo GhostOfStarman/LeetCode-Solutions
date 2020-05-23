@@ -1,3 +1,4 @@
+//LC 1207
 class Solution {
     public static boolean uniqueOccurrences(int[] arr) {
         
@@ -5,21 +6,14 @@ class Solution {
         
         //record the number of occurances for each number into a hashmap
         for(int i = 0; i < arr.length; i++){
-            
             int place = arr[i];
             
             if(!(m1.containsKey(place))){
-                
                 m1.put(place, 1);
-                
-            }
-            
-            else{
-                
+            }else{
                 int place2 = m1.get(place);
                 place2 += 1;
-                m1.put(place, place2);
-                
+                m1.put(place, place2);    
             }
         }
         
@@ -30,14 +24,10 @@ class Solution {
         for (int i = 0; i < values.size(); i++) {
           for (int j = i+1; j < values.size(); j++) {
             if(values.get(i) == values.get(j)) {
-
               return false;
-
             }
           }
         }
-
         return true;
-        
     }
 }
