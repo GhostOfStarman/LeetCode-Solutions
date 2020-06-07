@@ -8,7 +8,7 @@ class Solution {
         Set<String> morseSet = new HashSet<>();
         
         for(String word: words){
-			String morseCode = "";
+	String morseCode = "";
             for(int i = 0; i < word.length(); i++){
                 int letterToNum = word.charAt(i) - 'a';
                 morseCode += morseSplit[letterToNum];
